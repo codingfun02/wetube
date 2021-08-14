@@ -1,0 +1,35 @@
+{
+  "name": "wetube",
+  "version": "1.0.0",
+  "description": "wetube",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codingfun02/wetube.git"
+  },
+  "scripts": {
+    "dev": "nodemon --exec babel-node src/init.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/codingfun02/wetube/issues"
+  },
+  "homepage": "https://github.com/codingfun02/wetube#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "connect-mongo": "^4.4.1",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "mongoose": "^5.13.5",
+    "morgan": "^1.10.0",
+    "node-fetch": "^2.6.1",
+    "pug": "^3.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.8",
+    "@babel/node": "^7.14.7",
+    "@babel/preset-env": "^7.14.8",
+    "nodemon": "^2.0.12"
+  }
+}
