@@ -14,6 +14,10 @@
     "dev:server": "nodemon",
     "dev:assets": "webpack --mode=development -w"
   },
+  "engines": {
+    "node": "14.17.3",
+    "npm": "6.14.13"
+  },
   "author": "",
   "license": "MIT",
   "bugs": {
