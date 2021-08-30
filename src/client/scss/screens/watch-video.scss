@@ -1,0 +1,130 @@
+.video-data {
+    padding: 30px 14px;
+    margin-top: 30px;
+    border-radius: 8px;
+    color: $black;
+    background-color: #ecf0f1;
+}
+
+.video-data__title {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.video-data div:nth-child(2) {
+    margin-top: 7px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.video-data__description {
+    font-size: 18px;
+}
+
+.video-data__created-at {
+    color: #8a9599;
+}
+
+.video-data div:nth-child(3) {
+    margin-top: 5px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-style: italic;
+}
+
+.video-data div:nth-child(4) {
+    margin-top: 30px;
+    display: flex;
+    gap: 0px 10px;
+}
+
+.video-data div:nth-child(4) a {
+    font-size: 30px;
+    &:hover {
+        color: $blue;
+    }
+}
+
+.video__comment-form {
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    textarea {
+        width: 360px;
+        height: 100px;
+        resize: none;
+        outline: none;
+        font-family: inherit;
+        font-size: 20px;
+        padding: 3px 10px;
+    }
+    button {
+        all: unset;
+        margin-top: 5px;
+        height: 35px;
+        cursor: pointer;
+        text-align: center;
+        border-radius: 3px;
+    }
+}
+
+.video__comment-form--add {
+    margin-top: 50px;
+    button {
+        background-color: $red;
+    }
+}
+
+.video__comment-form--edit {
+    button {
+        background-color: $green;
+    }
+}
+
+.video__comments {
+    display: flex;
+    flex-direction: column;
+    max-width: 450px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 50px;
+    ul {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px 0;
+        .video__comment {
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-radius: 9999px;
+            background-color: white;
+            color: black;
+            .video__comment-content {
+                width: 250px;
+                margin-left: 5px;
+            }
+            .video__comment-del-btn,
+            .video__comment-edit-btn {
+                position: absolute;
+                top: 50%;
+                transform: translate(0, -50%);
+                cursor: pointer;
+            }
+            .video__comment-del-btn {
+                right: 10px;
+            }
+            .video__comment-edit-btn {
+                color: rgba(0, 0, 0, 0.7);
+                right: 40px;
+                &:hover {
+                    color: $blue;
+                }
+            }
+        }
+    }
+}

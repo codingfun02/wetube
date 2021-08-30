@@ -7,13 +7,17 @@ const userSchema = new mongoose.Schema({
   socialOnly: {type:Boolean, default: false},
   username: {type: String, required: true, unique: true},
   password: String,
-  name: String,
-  location: String
+  name: {type: String},
+  location: String,
+  comments: [{type: mongoose.Schema.Types.ObjectId, ref: "Comment"}],
+  videos: [{type: mongoose.Schema.Types.ObjectId, ref: "Video"}]
 });
 
 //업뎉 할땐 적용 ❌
 userSchema.pre("save", async function() {
-  this.password = await bcrypt.hash(this.password, 5);
+  if(this.isModified("password")) {
+    this.password = await bcrypt.hash(this.password, 5);
+  }
 });
 
 const User = mongoose.model('User', userSchema);

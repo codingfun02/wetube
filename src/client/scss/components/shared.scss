@@ -1,0 +1,37 @@
+.empty__message {
+  margin-bottom: 50px;
+  font-size: 18px;
+}
+
+.video-grid {
+  display: grid;
+  gap: 50px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.auth-switch {
+  text-align: center;
+  margin-top: 40px;
+  a {
+    text-decoration: underline;
+  }
+}
+
+label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $blue;
+  height: 50px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 20px;
+  &:hover {
+    background: linear-gradient(to bottom right, #fc4a1a, #f7b733);
+  }
+}
+
+input[type="file"] {
+  display: none !important;
+}
