@@ -16,7 +16,7 @@ header
             if loggedInUser.avatarUrl === ""
               span.header__avatar 😀
             else
-              if loggedInUser.socialOnly
+              if loggedInUser.avatarUrl.includes("github")
                 img(src=loggedInUser.avatarUrl, crossorigin).header__avatar
               else
                 img(src="/" + loggedInUser.avatarUrl, crossorigin).header__avatar

@@ -6,7 +6,7 @@ block content
     if loggedInUser.avatarUrl === ""
       span.avatar 😀
     else
-      if loggedInUser.socialOnly
+      if loggedInUser.avatarUrl.includes("github")
         img(src=loggedInUser.avatarUrl, crossorigin).avatar
       else
         img(src="/" + loggedInUser.avatarUrl, crossorigin).avatar
